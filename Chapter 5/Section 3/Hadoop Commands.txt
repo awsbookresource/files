@@ -1,0 +1,11 @@
+$ hadoop fs -mkdir /user/input
+
+$ hadoop fs -put ./temperature /user/input/
+
+$ hadoop fs -ls /user/input/
+
+$ hadoop fs -rm -r output/mapreduce/temp
+
+$ hadoop jar ./Temperature.jar /user/input/temperature output/mapreduce/temp
+
+$ hadoop fs -cat output/mapreduce/temp/part-r-00000
